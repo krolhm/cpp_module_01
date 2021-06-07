@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 10:38:44 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/07 17:48:17 by rbourgea         ###   ########.fr       */
+/*   Created: 2021/06/07 18:41:15 by rbourgea          #+#    #+#             */
+/*   Updated: 2021/06/07 19:07:27 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
 
-#include <iostream>
-#include <iomanip>
+#include "Zombie.hpp"
 
-class Pony
+class ZombieHorde
 {
-	public:
-		Pony(std::string name, int size, int age);
-		~Pony();
-		void feed(void);
-		void walk(void);
-		void sleep(void);
-	private:
-		std::string _name;
-		int			_size;
-		int			_age;
+    public:
+        ZombieHorde(int n);
+        ~ZombieHorde();
+        void announce(void);
+
+    private:
+        int _n;
+        Zombie *_Horde;
 };
 
 #endif

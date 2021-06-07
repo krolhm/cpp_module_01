@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ex01.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 10:38:44 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/07 17:48:17 by rbourgea         ###   ########.fr       */
+/*   Created: 2021/06/05 18:04:23 by rbourgea          #+#    #+#             */
+/*   Updated: 2021/06/07 16:31:41 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
 #include <iostream>
-#include <iomanip>
+#include <string>
 
-class Pony
+void memoryLeak()
 {
-	public:
-		Pony(std::string name, int size, int age);
-		~Pony();
-		void feed(void);
-		void walk(void);
-		void sleep(void);
-	private:
-		std::string _name;
-		int			_size;
-		int			_age;
-};
+    std::string *panthere = new std::string("String panthere");
+    std::cout << *panthere << std::endl;
+    delete panthere;
+}
 
-#endif
+int main()
+{
+    memoryLeak();
+    return (0);
+}

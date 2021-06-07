@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/05 10:38:44 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/07 17:48:17 by rbourgea         ###   ########.fr       */
+/*   Created: 2021/06/07 18:40:27 by rbourgea          #+#    #+#             */
+/*   Updated: 2021/06/07 19:13:19 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Zombie.hpp"
+#include "ZombieHorde.hpp"
 
-#include <iostream>
-#include <iomanip>
-
-class Pony
+int main()
 {
-	public:
-		Pony(std::string name, int size, int age);
-		~Pony();
-		void feed(void);
-		void walk(void);
-		void sleep(void);
-	private:
-		std::string _name;
-		int			_size;
-		int			_age;
-};
+    std::srand(std::time(nullptr));
+    
+    ZombieHorde HollyHorde(20);
+    HollyHorde.announce();
 
-#endif
+    return (0);
+}
