@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 19:56:41 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/08 16:46:31 by rbourgea         ###   ########.fr       */
+/*   Created: 2021/06/07 20:23:44 by rbourgea          #+#    #+#             */
+/*   Updated: 2021/06/10 17:27:43 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef HUMAN_HPP
+# define HUMAN_HPP
 
-int	main()
+#include "Brain.hpp"
+
+class Human
 {
-	std::string s = "HI THIS IS BRAIN";
-	std::string *s_pointer = &s;
-	std::string &s_reference = s;
-	
-	std::cout << "s with pointer: " << *s_pointer << std::endl;
-	std::cout << "s with reference: " << s_reference << std::endl;
-	return (0);
-}
+    public:
+        Human(int _neurons = 0, int _hormones = 0);
+        ~Human();
+        std::string identify(void) const;
+        Brain & getBrain(void);
+
+    private:
+        Brain const _HBrain;
+};
+
+#endif

@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 19:56:41 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/08 16:46:31 by rbourgea         ###   ########.fr       */
+/*   Created: 2021/06/07 20:23:57 by rbourgea          #+#    #+#             */
+/*   Updated: 2021/06/10 09:17:40 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Human.hpp"
 #include <iostream>
-#include <string>
 
-int	main()
+int main()
 {
-	std::string s = "HI THIS IS BRAIN";
-	std::string *s_pointer = &s;
-	std::string &s_reference = s;
-	
-	std::cout << "s with pointer: " << *s_pointer << std::endl;
-	std::cout << "s with reference: " << s_reference << std::endl;
-	return (0);
+    Human bob;
+    std::cout << bob.identify() << std::endl;
+    std::cout << bob.getBrain().identify() << std::endl;
 }

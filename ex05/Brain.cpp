@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex04.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 19:56:41 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/08 16:46:31 by rbourgea         ###   ########.fr       */
+/*   Created: 2021/06/07 20:23:12 by rbourgea          #+#    #+#             */
+/*   Updated: 2021/06/10 17:27:52 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Brain.hpp"
 
-int	main()
+Brain::Brain(int neurons, int hormones)
 {
-	std::string s = "HI THIS IS BRAIN";
-	std::string *s_pointer = &s;
-	std::string &s_reference = s;
-	
-	std::cout << "s with pointer: " << *s_pointer << std::endl;
-	std::cout << "s with reference: " << s_reference << std::endl;
-	return (0);
+    _neurons = neurons;
+    _hormones = hormones;
+}
+
+Brain::~Brain()
+{
+    
+}
+
+std::string Brain::identify() const
+{
+    std::stringstream ss;
+    std::string str;
+
+    ss << this;
+    str = ss.str();
+
+    return (str);
 }
