@@ -6,7 +6,7 @@
 /*   By: rbourgea <rbourgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 18:40:27 by rbourgea          #+#    #+#             */
-/*   Updated: 2021/06/07 19:13:19 by rbourgea         ###   ########.fr       */
+/*   Updated: 2021/06/12 15:36:46 by rbourgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    std::srand(std::time(nullptr));
+    std::srand(time(nullptr));
     
     ZombieHorde HollyHorde(20);
     HollyHorde.announce();
